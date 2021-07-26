@@ -1,0 +1,63 @@
+.todos-wrapper{
+    height: 100%;
+    width: auto;
+    // This is line is here in case the user adds alot of notes, it is going to make it scrollable 
+    overflow-y: auto;
+    // background-color: rosybrown;
+}
+.todo-item{
+    display: flex;
+    background-color: rgba($color: black, $alpha: 0.5);
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding:10px 12px;
+    align-items: center;
+    cursor: pointer;
+    
+    
+}
+.container{
+    padding-top: 50px;
+}
+.todos-text{
+    color: rgba($color: white, $alpha: 0.82);
+    font-size: 18px;
+}
+.check-box{
+    padding: 4px; 
+    border-radius: 50%;
+    border: 3px solid rgba(white, 0.35);
+    margin-right: 15px;
+    display: flex;
+
+    i{
+        font-size: 18px;
+        opacity: 0;
+    }
+}
+.todo-item:hover{
+    .todos-text{
+        color: rgba($color: white, $alpha: 1.2);
+    }
+    .check-box{
+        border-color: transparent;
+        background-color: rgba($color: white, $alpha: 0.35);
+    }
+}
+.todo-item.completed{
+    .todos-text{
+        color: rgba($color: white, $alpha: 0.78);
+    }
+    .check-box{
+        background-color: rgb(9, 218, 89);
+        border-color: transparent;
+
+        i{
+            opacity: 1;
+        }
+    }
+    
+}
+.check-box,.todos-text{
+    transition: 0.12s;
+}

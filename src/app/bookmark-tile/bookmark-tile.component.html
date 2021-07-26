@@ -1,0 +1,12 @@
+<a class="bookmarks-tile" href="{{bookmark.url}}">
+    <div class="tile-icon" *ngIf = "!IconError">
+        <img [src]="tileIconSource" alt="" (error) = "IconError = true">
+    </div>
+    <div class="tile-icon fallback" *ngIf ="IconError">
+        {{bookmark.name.toUpperCase()[0] }}
+    </div>
+    
+    <p class = "tile-text">{{bookmark.name}}</p>
+   
+</a>
+

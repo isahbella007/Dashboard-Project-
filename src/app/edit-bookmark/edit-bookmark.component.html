@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="add-bookmark-wrapper container ">
+        <h2 class="is-bold">{{bookmark.name}}</h2>
+        
+        <form #form = "ngForm" ngNativeValidate autocomplete="off" (ngSubmit) = "editBookmark(form)">
+            <input class="textbox" type="text" [ngModel] = "bookmark.name" #titleField = "ngModel" name = "name" placeholder="e.g wikipedia ..." >
+            
+
+
+            <input class="textbox" type="url" [ngModel] = "bookmark.url" #titleField = "ngModel" name = "url" placeholder="e.g. http://wikipedia.com..." required >
+            
+
+            <div class="btn-container">
+                <a routerLink = "../" class="btn">Cancel</a>
+                <button type  = "submit" (click) = "deleteFunction()" class="btn align-end">Delete</button>
+                <button type  = "submit" class="btn align-end">Save</button>
+            </div>
+           
+        </form>
+    </div>
+    
+</div>
